@@ -14,41 +14,29 @@ db = mysql.connector.connect(
     passwd=os.getenv("DB_PASSWORD"),
     database=os.getenv("DB_NAME")
 )
-
-
-# ---------------- HOME PAGE ----------------
-
 @app.route('/')
 def home():
     return render_template('index.html')
 
-
 @app.route('/about')
 def about():
     return render_template('about.html')
-
-
+    
 @app.route('/products')
 def products():
     return render_template('products.html')
-
 
 @app.route('/pricing')
 def pricing():
     return render_template('pricing.html')
 
-
 @app.route('/availability')
 def availability():
     return render_template('availability.html')
 
-
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
-
-
-# ---------------- CUSTOMER LOGIN ----------------
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -79,12 +67,11 @@ def login():
         return "Invalid Customer Credentials"
 
     return render_template('login.html')
-# ---------------- ADMIN LOGIN ----------------
 
 @app.route('/login2', methods=['GET', 'POST'])
 def login2():
 
-    cursor = db.cursor()   # ADD THIS
+    cursor = db.cursor()   
 
     if request.method == 'POST':
 
@@ -108,8 +95,6 @@ def login2():
 
     return render_template('login2.html')
 
-# ---------------- CUSTOMER REGISTER ----------------
-
 @app.route('/register', methods=['GET', 'POST'])
 def register():
      
@@ -132,8 +117,6 @@ def register():
 
      return render_template('register.html')
 
-
-# ---------------- REQUEST SERVICE ----------------
 @app.route('/request', methods=['GET', 'POST'])
 def request_page():
 
@@ -187,8 +170,6 @@ def request_page():
         return "Request Submitted Successfully"
 
     return render_template('request.html')
-
-# ---------------- ADMIN DASHBOARD ----------------
 
 @app.route('/admin')
 def admin():
@@ -309,6 +290,7 @@ def admin_requests():
         'admin_requests.html',
         requests=requests
     )   
+    
 @app.route('/assign_worker/<int:id>', methods=['GET','POST'])
 def assign_worker(id):
 
@@ -457,8 +439,6 @@ def my_requests():
         'my_requests.html',
         requests=requests
     )
-
-# ---------------- LOGOUT ----------------
 
 @app.route('/logout')
 def logout():
