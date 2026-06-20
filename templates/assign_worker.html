@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assign Worker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+
+</head>
+<body>
+
+
+<div>
+<div class="content">
+<h1>Assign Worker</h1>
+<form method="POST">
+
+    <select name="worker_id">
+
+        {% for worker in workers %}
+
+        <option value="{{ worker.id }}">
+            {{ worker.name }}
+        </option>
+
+        {% endfor %}
+
+    </select>
+
+    <br><br>
+
+    <button type="submit">
+        Assign Worker
+    </button>
+
+</form>
+</div>
+</div>
+
+</body>
+</html>

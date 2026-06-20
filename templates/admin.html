@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+<div class="sidebar">
+
+    <h2>WeighCare Admin</h2>
+
+    <a href="/admin">Dashboard</a>
+
+    <a href="/logout">Logout</a>
+
+</div>
+    <!-- Main Content -->
+    <div class="content">
+
+        <h1>Admin Dashboard</h1>
+
+        <p class="main-text">
+            View and manage all customer repair requests.
+        </p>
+
+        <table border="1" cellpadding="12" cellspacing="0">
+
+            <tr>
+                <th>Request ID</th>
+                <th>Customer ID</th>
+                <th>Machine Type</th>
+                <th>Problem</th>
+                <th>Preferred Date</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>Digital Scale</td>
+                <td>Display not working</td>
+                <td>2026-05-20</td>
+                <td>Pending</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>Platform Scale</td>
+                <td>Calibration issue</td>
+                <td>2026-05-25</td>
+                <td>Completed</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

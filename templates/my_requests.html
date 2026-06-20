@@ -1,0 +1,33 @@
+
+<html>
+<head>
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+
+
+<body>  
+<h1>My Requests</h1>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Machine</th>
+    <th>Problem</th>
+    <th>Status</th>
+</tr>
+
+{% for r in requests %}
+
+<tr>
+    <td>{{ r.id }}</td>
+    <td>{{ r.machine_type }}</td>
+    <td>{{ r.problem }}</td>
+    <td>{{ r.status }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+</body>
+    

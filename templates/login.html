@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Login</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <div class="sidebar">
+
+        <h2>WeighCare</h2>
+
+        <a href="/">Home</a>
+        <a href="/register">Register</a>
+
+    </div>
+
+    <div class="content">
+
+        <h1>Customer Login</h1>
+
+        <p>
+            Login to access your account and manage your service requests.
+        </p>
+
+        <form method="POST">
+
+            <label>Username</label><br>
+            <input type="text" name="username" required><br><br>
+
+            <label>Password</label><br>
+            <input type="password" name="password" required><br><br>
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        <br>
+
+        <p>
+            New Customer?
+            <a href="/register">Register Here</a>
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

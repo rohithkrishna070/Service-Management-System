@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Layout */
+.layout {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: linear-gradient(180deg, #000000, #2a5298);
+    color: white;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #ffffff33;
+}
+
+/* Main Content */
+.content {
+    margin-left: 260px;
+    padding: 40px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    color: white;
+}
+
+/* Headings */
+h1 {
+    font-size: 36px;
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+}
+
+input,
+textarea {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* Button */
+button {
+    background-color: #ffffff;
+    color: #1e3c72;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #dcdcdc;
+}
+
+/* Lists */
+ul {
+    line-height: 2;
+}
+table {
+    background-color: white;
+    color: black;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+th {
+    background-color: #2a5298;
+    color: white;
+}
+
+td, th {
+    padding: 12px;
+}

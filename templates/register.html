@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <div class="sidebar">
+
+        <h2>WeighCare</h2>
+
+        <a href="/">Home</a>
+        <a href="/login">Customer Login</a>
+
+    </div>
+
+    <div class="content">
+
+        <h1>Customer Registration</h1>
+
+        <form method="POST">
+
+            <label>Username</label><br>
+            <input type="text" name="username" required><br><br>
+
+            <label>Password</label><br>
+            <input type="password" name="password" required><br><br>
+
+            <button type="submit">Register</button>
+
+        </form>
+
+        <br>
+
+        <p>
+            Already have an account?
+            <a href="/login">Customer Login</a>
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

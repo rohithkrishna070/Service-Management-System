@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request Service</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="layout">
+<div class="sidebar">
+
+    <h2>WeighCare</h2>
+
+    <a href="/">Home</a>
+
+    <a href="/request">Request Service</a>
+
+    <a href="/logout">Logout</a>
+
+</div>
+
+
+    <div class="content">
+
+        <h1>Service Request</h1>
+
+     <form method="POST" action="/request">
+
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Phone:</label><br>
+    <input type="text" name="phone" required><br><br>
+
+    <label>Address:</label><br>
+    <textarea name="address" required></textarea><br><br>
+
+    <label>Machine Type:</label><br>
+    <input type="text" name="machine_type" required><br><br>
+
+    <label>Problem Description:</label><br>
+    <textarea name="problem" required></textarea><br><br>
+
+    <label>Preferred Date:</label><br>
+    <input type="date" name="preferred_date" required><br><br>
+
+    <button type="submit">Submit Request</button>
+
+</form>
+    </div>
+
+</div>
+
+</body>
+</html>
